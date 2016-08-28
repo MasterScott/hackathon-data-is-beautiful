@@ -1,0 +1,20 @@
+{
+  "name": "sv",
+  "description": "",
+  "main": "server.js",
+  "authors": [
+    "Max Harley <maxh@maxh.io> (maxh.io)"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "c3": "^0.4.11"
+  }
+}

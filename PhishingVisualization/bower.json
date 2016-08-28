@@ -1,0 +1,22 @@
+{
+  "name": "sv",
+  "description": "",
+  "main": "server.js",
+  "authors": [
+    "Max Harley <maxh@maxh.io> (maxh.io)"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "datamaps": "^0.5.7",
+    "d3": "3.0.x",
+    "topojson": "^1.6.26"
+  }
+}
