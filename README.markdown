@@ -23,6 +23,7 @@ Here are a few resources to get you started on developing.
 +	[Google APIs][googleapi] Information from your Google Accounts
 +	[Google Public Data][googledata] Search engine for publicly available datasets
 +	[Office of Instititutional Research][OIR] Information about classes and professors at Clemson
++       [Reddit API][reddit] Reddit has an easy-to-use API by adding .json to the end of any page
 +	And more ...
 
 ## Data Processing Libraries##
@@ -40,6 +41,7 @@ Here are a few resources to get you started on developing.
 +	[R][r] programming language designed for statistical processing
 +	And more ...
 
+[reddit]: https://reddit.com/.json
 [datagov]: https://data.gov/
 [d3js]: https://d3js.org/
 [googleapi]: https://developers.google.com/apis-explorer/#p/
