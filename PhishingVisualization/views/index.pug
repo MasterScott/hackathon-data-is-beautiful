@@ -1,0 +1,46 @@
+html
+  head
+    
+  body
+    a(href="/about") About
+    #map(style="width: 1000px; height: 500px; position: relative;")
+    script(src="/public/d3/d3.min.js", charset="utf-8")
+    script(src="/public/topojson/topojson.min.js")
+    script(src="/public/datamaps/dist/datamaps.usa.min.js")
+
+    script.
+      var data = !{ JSON.stringify(data) };
+
+      var paletteScale = d3.scale.linear()
+          .domain([#{minVal},#{maxVal}])
+          .range(["#F2F2F2","#1C1C1C"]);
+
+      var transformedData = {};
+      data.forEach(function(block){ //
+          var state = block[0], value = block[1];
+          transformedData[state] = { numberOfPhishes: value, fillColor: paletteScale(value) };
+      });
+
+      var phishMap = new Datamap({
+          element: document.getElementById('map'),
+          scope: 'usa',
+          data: transformedData,
+          fills: { defaultFill: '#F5F5F5' },
+          geographyConfig: {
+              borderColor: '#DEDEDE',
+              highlightBorderWidth: 2,
+              highlightFillColor: function(geo) {
+                  return geo['fillColor'] || '#F5F5F5';
+              },
+              highlightBorderColor: '#B7B7B7',
+              popupTemplate: function(geo, data) {
+                  if (!data) { return ; }
+                  return ['<div class="hoverinfo">',
+                      '<strong>', geo.properties.name, '</strong>',
+                      '<br>Count: <strong>', data.numberOfPhishes, '</strong>',
+                      '</div>'].join('');
+              }
+          }
+      });
+
+

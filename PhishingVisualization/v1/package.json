@@ -1,0 +1,19 @@
+{
+  "name": "sv",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "author": "Max Harley <maxh@maxh.io> (maxh.io)",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.14.0",
+    "geoip-lite": "^1.1.8",
+    "pg": "^6.1.0",
+    "pug": "^2.0.0-beta6",
+    "request": "^2.74.0",
+    "requests": "^0.1.7"
+  }
+}

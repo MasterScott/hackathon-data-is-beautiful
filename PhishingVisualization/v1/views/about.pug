@@ -1,0 +1,12 @@
+h1 About
+
+h3 Technologies Used
+ul
+  li: a(href="https://nodejs.org/en/") NodeJS + Express
+  li: a(href="http://c3js.org/") C3
+  li: a(href="https://github.com/bluesmoon/node-geoip") Geoip-lite
+
+h3 About the page
+
+p I am using the data from <a href="https://openphish.com/">OpenPhish</a> (Available to students for free after contact with the owners of the data). After getting the information about the phishing site, I cross-refrence the IP with blocks of IPs that are handed out to different ISPs through Geoip-lite. Whenever I download and parse the data, I make sure to save it as a variable in the server instead of going through the process of re-downloading/parsing the data for every HTTP request. Once an HTTP request is made, the server simply hands off the global variable that had IP information to the front-end.
+p In the front-end, I am using c3 (which is a variation of d3) to easily make the pie chart.

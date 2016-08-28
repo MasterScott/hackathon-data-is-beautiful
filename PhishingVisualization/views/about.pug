@@ -1,0 +1,12 @@
+h1 About
+
+h3 Technologies Used
+ul
+  li: a(href="https://nodejs.org/en/") NodeJS + Express
+  li: a(href="https://github.com/markmarkoh/datamaps")  DataMaps
+  li: a(href="https://github.com/bluesmoon/node-geoip") Geoip-lite
+
+h3 About the page
+
+p I am using the data from <a href="https://openphish.com/">OpenPhish</a> (Available to students for free after contact with the owners of the data). After getting the information about the phishing site, I cross-refrence the IP with blocks of IPs that are handed out to different ISPs through Geoip-lite. With the data about how many sites correlate to every state, I find the minimum and maximum number of sites found to make the shading on the map.  Whenever I download and parse the data, I make sure to save it as a variable in the server instead of going through the process of re-downloading/parsing the data for every HTTP request. Once an HTTP request is made, the server simply hands off the global variable that had IP information to the front-end.
+p For the front-end, I use DataMaps to display the map with the shading. I use d3s linear scale on colors to make a color for every state. DataMaps does the rest.
